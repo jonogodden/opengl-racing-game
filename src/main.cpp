@@ -458,25 +458,28 @@ public:
 
     void update(float deltaTime, Terrain &terrain)
     {
-        // Simple physics update
+        // Update position first
+        position += velocity * deltaTime;
+
+        // Get terrain height at current position
         float terrainHeight = terrain.getHeight(position.x, position.z);
 
-        // Gravity
+        // Always adjust Y position to terrain height (with vehicle height offset)
         if (position.y > terrainHeight + height * 0.5f)
         {
+            // Vehicle is above terrain - apply gravity
             velocity.y -= 9.8f * deltaTime;
         }
         else
         {
+            // Vehicle is at or below terrain - snap to terrain surface
             position.y = terrainHeight + height * 0.5f;
             velocity.y = 0.0f;
         }
 
-        // Update position
-        position += velocity * deltaTime;
-
-        // Damping
-        velocity *= 0.95f;
+        // Damping for horizontal movement
+        velocity.x *= 0.95f;
+        velocity.z *= 0.95f;
     }
 
     void render()
