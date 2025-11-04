@@ -1,5 +1,7 @@
 # OpenGL Racing Game
 
+![Car driving on terrain](car-driving.gif)
+
 A simple 3D racing game prototype built with **C++**, **OpenGL**, **GLAD**, and **GLFW**.
 
 ---
