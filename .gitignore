@@ -1,0 +1,70 @@
+# ----------------------------
+# Visual Studio / Windows
+# ----------------------------
+
+## User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Build results
+[Bb]uild/
+[Bb]in/
+[Oo]utput/
+[Dd]ebug*/
+[Re]lease*/
+x64/
+x86/
+
+## Visual Studio auto-generated files
+*.VC.db
+*.VC.VC.opendb
+*.VC.VC.db
+*.VC.VC.opendb
+ipch/
+*.iobj
+*.ipdb
+*.pdb
+*.obj
+*.idb
+*.ilk
+*.log
+*.ncb
+*.aps
+*.pch
+*.rsp
+*.sbr
+*.vs
+
+# ----------------------------
+# CMake / build artifacts
+# ----------------------------
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.dir
+*.make
+
+# ----------------------------
+# Temporary files
+# ----------------------------
+*.tmp
+*.temp
+*.swp
+*.bak
+*.orig
+*.log
+
+# ----------------------------
+# Keep these
+# ----------------------------
+# Your source folders
+!src/
+!include/
+!tests/
+
+# Project files
+!CMakeLists.txt
+!README.md
